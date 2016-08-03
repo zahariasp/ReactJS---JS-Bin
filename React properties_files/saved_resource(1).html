@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://null.jsbin.com/runner -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){window.__blocked={methods:["open","print","alert","prompt","confirm"],old:{}};for(var m in __blocked.methods){try {__blocked.old[m]=window[m];window[m]=function(){};}catch(e){}}})()</script>
+
+
+
+<script src="./react-0.14.7.min.js"></script>
+<script src="./react-dom-0.14.7.min.js"></script>
+  <link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+  
+  <title>JS Bin</title>
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <div id="react_trainer"><div data-reactid=".0"><h1 data-reactid=".0.0">property's text is here </h1><h2 data-reactid=".0.1">another property here</h2><h3 data-reactid=".0.2">100</h3></div></div>
+<script>try {var Properties = React.createClass({displayName: 'Properties',
+  render: function() {
+    return (
+React.createElement("div", null, 
+React.createElement("h1", null, this.props.txt), 
+React.createElement("h2", null, this.props.def), 
+React.createElement("h3", null, this.props.main)
+)
+    );
+  }
+});
+
+//why if this is not comment the react does not work ?
+
+/*Properties.propTypes = {
+txt: React.PropType.string,
+def: React.PropType.string,
+main: React.PropType.number
+}*/
+
+Properties.defaultProps = {
+txt: "property's text is here ",
+def: "another property here"
+}
+
+ReactDOM.render(
+React.createElement(Properties, {main: 100}),
+  document.getElementById("react_trainer")
+);
+} catch (error) { throw error; }
+
+//# sourceURL=yipejinubi.js
+</script>
+
+
+<!--jsbin live harness--><script>(function(){for(var m in __blocked.methods){try{window[m]=__blocked.old[m];delete __blocked;}catch(e){}};})()</script></body></html>
